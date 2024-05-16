@@ -6,7 +6,7 @@
 /*   By: hbouchel <hbouchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:08:44 by hbouchel          #+#    #+#             */
-/*   Updated: 2024/05/15 23:05:23 by hbouchel         ###   ########.fr       */
+/*   Updated: 2024/05/16 15:21:50 by hbouchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ void	sort_3(t_stack **stack)
 // 	pa(stack_a, stack_b);
 // }
 
- void	sort4_5(t_stack **stack_a, t_stack **stack_b)
+void	sort4_5(t_stack **stack_a, t_stack **stack_b)
 {
 	int		min;
 	t_stack	*tmp;

@@ -6,7 +6,7 @@
 /*   By: hbouchel <hbouchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:37:24 by hbouchel          #+#    #+#             */
-/*   Updated: 2024/05/02 20:38:06 by hbouchel         ###   ########.fr       */
+/*   Updated: 2024/05/16 15:47:33 by hbouchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,15 @@ int	ft_isnum(char *num)
 	return (1);
 }
 
-void	free_error(char **args)
+void	free_error(char **args, int ac)
 {
-	ft_free(args);
-	ft_error("error");
+	if (ac == 2)
+	{
+		ft_free(args);
+		ft_error("error");
+	}
+	else
+		ft_error("error");
 }
 
 void	ft_check_args(int ac, char **av)
@@ -64,11 +69,11 @@ void	ft_check_args(int ac, char **av)
 	{
 		tmp = ft_atoi(args[i]);
 		if (!ft_isnum(args[i]))
-			free_error(args);
+			free_error(args, ac);
 		if (ft_contains(tmp, args, i))
-			free_error(args);
+			free_error(args, ac);
 		if (tmp < -2147483648 || tmp > 2147483647)
-			free_error(args);
+			free_error(args, ac);
 		i++;
 	}
 	if (ac == 2)

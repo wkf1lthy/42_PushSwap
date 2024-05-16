@@ -6,7 +6,7 @@
 /*   By: hbouchel <hbouchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 20:07:13 by hbouchel          #+#    #+#             */
-/*   Updated: 2024/05/15 23:03:34 by hbouchel         ###   ########.fr       */
+/*   Updated: 2024/05/16 15:41:00 by hbouchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void				ft_check_args(int ac, char **av);
 void				free_stack(t_stack **stack);
 void				make_top(t_stack **stack, int distance);
 void				sort_3(t_stack **stack);
-void				free_error(char **args);
- void	sort4_5(t_stack **stack_a, t_stack **stack_b);
+void				free_error(char **args, int ac);
+void				sort4_5(t_stack **stack_a, t_stack **stack_b);
 
 #endif
